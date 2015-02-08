@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.name = 'attribute'
   s.summary = 'Define an attribute on a class using an imperative API'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.authors = ['']
   s.require_paths = ['lib']
   s.files = Dir.glob('{lib}/**/*')
