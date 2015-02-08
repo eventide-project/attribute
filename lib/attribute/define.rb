@@ -18,18 +18,18 @@ module Attribute
     end
 
     def !
-      define_getter if [:reader, :accessor].include? visibility
-      define_setter if [:writer, :accessor].include? visibility
+      define_reader if [:reader, :accessor].include? visibility
+      define_writer if [:writer, :accessor].include? visibility
     end
 
-    def define_getter
+    def define_reader
       name = self.name
       target_class.send :define_method, name do
         instance_variable_get("@#{name}")
       end
     end
 
-    def define_setter
+    def define_writer
       name = self.name
       target_class.send :define_method, "#{name}=" do |value|
         instance_variable_set("@#{name}", value)
