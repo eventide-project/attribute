@@ -1,5 +1,5 @@
 class Reader
-  include AttributeProof
+  include Proof::Attribute
 
   Attribute.define self, :some_attr, :reader
 end

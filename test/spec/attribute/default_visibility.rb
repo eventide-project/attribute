@@ -1,5 +1,5 @@
 class DefaultVisibility
-  include AttributeProof
+  include Proof::Attribute
 
   Attribute.define self, :some_attr
 end
