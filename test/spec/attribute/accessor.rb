@@ -1,15 +1,13 @@
 class Accessor
+  include AttributeProof
+
   Attribute.define self, :some_attr, :accessor
 end
 
 describe Accessor do
   subject(:accessor) { Accessor.new }
 
-  specify 'Has a getter' do
-    expect(accessor).to respond_to :some_attr
-  end
-
-  specify 'Has a setter' do
-    expect(accessor).to respond_to :some_attr=
+  specify 'Is an accessor' do
+    expect(accessor.accessor? :some_attr).to be(true)
   end
 end
