@@ -7,7 +7,7 @@ module Accessor
 end
 
 describe Accessor::Example do
-  specify 'Is an accessor' do
+  specify "Is an accessor" do
     expect(subject.accessor? :some_attr).to be(true)
   end
 end

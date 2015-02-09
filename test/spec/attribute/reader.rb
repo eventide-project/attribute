@@ -7,7 +7,7 @@ module Reader
 end
 
 describe Reader::Example do
-  specify 'Is a reader' do
+  specify "Is a reader" do
     expect(subject.reader? :some_attr).to be(true)
   end
 

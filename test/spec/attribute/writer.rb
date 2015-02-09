@@ -7,7 +7,7 @@ module Writer
 end
 
 describe Writer::Example do
-  specify 'Is a writer' do
+  specify "Is a writer" do
     expect(subject.writer? :some_attr).to be(true)
   end
 end
