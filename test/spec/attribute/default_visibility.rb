@@ -1,13 +1,13 @@
-class DefaultVisibility
-  include Proof::Attribute
+module DefaultVisibility
+  class Example
+    include Proof::Attribute
 
-  Attribute.define self, :some_attr
+    Attribute::Define.! self, :some_attr
+  end
 end
 
-describe DefaultVisibility do
-  subject(:default_visibility) { DefaultVisibility.new }
-
+describe DefaultVisibility::Example do
   specify 'Is a reader' do
-    expect(default_visibility.reader? :some_attr).to be(true)
+    expect(subject.reader? :some_attr).to be(true)
   end
 end

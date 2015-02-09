@@ -1,13 +1,17 @@
-class Reader
-  include Proof::Attribute
+module Reader
+  class Example
+    include Proof::Attribute
 
-  Attribute.define self, :some_attr, :reader
+    Attribute::Define.! self, :some_attr, :reader
+  end
 end
 
-describe Reader do
-  subject(:reader) { Reader.new }
-
+describe Reader::Example do
   specify 'Is a reader' do
-    expect(reader.reader? :some_attr).to be(true)
+    expect(subject.reader? :some_attr).to be(true)
+  end
+
+  specify "Has no initial value" do
+    expect(subject.some_attr).to be_nil
   end
 end
