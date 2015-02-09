@@ -1,13 +1,13 @@
-class Accessor
-  include Proof::Attribute
+module Accessor
+  class Example
+    include Proof::Attribute
 
-  Attribute.define self, :some_attr, :accessor
+    Attribute::Define.! self, :some_attr, :accessor
+  end
 end
 
-describe Accessor do
-  subject(:accessor) { Accessor.new }
-
-  specify 'Is an accessor' do
-    expect(accessor.accessor? :some_attr).to be(true)
+describe Accessor::Example do
+  specify "Is an accessor" do
+    expect(subject.accessor? :some_attr).to be(true)
   end
 end
