@@ -14,7 +14,7 @@ module Attribute
       @visibility = visibility
     end
 
-    def self.!(target_class, attr_name, visibility)
+    def self.!(target_class, attr_name, visibility=nil)
       instance = new target_class, attr_name, visibility
       instance.!
     end
