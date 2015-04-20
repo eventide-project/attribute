@@ -1,5 +1,5 @@
 require_relative '../test_init'
-require_relative 'attribute/proof'
+require_relative 'proof'
 
 RSpec.configure do |config|
   config.pattern = '**/*.rb'
