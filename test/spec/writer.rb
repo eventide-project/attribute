@@ -2,7 +2,7 @@ module Writer
   class Example
     include Proof::Attribute
 
-    Attribute::Define.! self, :some_attr, :writer
+    Attribute::Define.(self, :some_attr, :writer)
   end
 end
 

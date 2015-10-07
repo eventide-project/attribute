@@ -1,6 +1,6 @@
 module ReaderWithoutInitialValue
   class Example
-    Attribute::Define.! self, :some_attr
+    Attribute::Define.(self, :some_attr)
   end
 end
 

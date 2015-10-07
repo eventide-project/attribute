@@ -2,7 +2,7 @@ module Accessor
   class Example
     include Proof::Attribute
 
-    Attribute::Define.! self, :some_attr, :accessor
+    Attribute::Define.(self, :some_attr, :accessor)
   end
 end
 
