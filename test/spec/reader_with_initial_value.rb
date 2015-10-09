@@ -1,6 +1,6 @@
 module ReaderWithInitialValue
   class Example
-    Attribute::Define.! self, :some_attr do
+    Attribute::Define.(self, :some_attr) do
       :some_initial_value
     end
   end

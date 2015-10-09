@@ -14,15 +14,17 @@ module Attribute
       @initialize_value = initialize_value
     end
 
-    def self.!(target_class, attr_name, visibility=nil, &initialize_value)
+    def self.call(target_class, attr_name, visibility=nil, &initialize_value)
       instance = new target_class, attr_name, visibility, &initialize_value
-      instance.!
+      instance.()
     end
+    class << self; alias :! :call; end # TODO: Remove deprecated actuator [Kelsey, Thu Oct 08 2015]
 
-    def !
+    def call
       define_reader if [:reader, :accessor].include? visibility
       define_writer if [:writer, :accessor].include? visibility
     end
+    alias :! :call # TODO: Remove deprecated actuator [Kelsey, Thu Oct 08 2015]
 
     def define_reader
       attr_name = :"#{self.attr_name}"
@@ -33,7 +35,7 @@ module Attribute
 
         unless val
           if initialize_value
-            val = initialize_value.call
+            val = initialize_value.()
             instance_variable_set var_name, val
           end
         end

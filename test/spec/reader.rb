@@ -2,7 +2,7 @@ module Reader
   class Example
     include Proof::Attribute
 
-    Attribute::Define.! self, :some_attr, :reader
+    Attribute::Define.(self, :some_attr, :reader)
   end
 end
 

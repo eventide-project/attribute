@@ -2,7 +2,7 @@ module DefaultVisibility
   class Example
     include Proof::Attribute
 
-    Attribute::Define.! self, :some_attr
+    Attribute::Define.(self, :some_attr)
   end
 end
 
