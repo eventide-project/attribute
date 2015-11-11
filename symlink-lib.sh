@@ -1,3 +1,3 @@
 source ./library-symlinks.sh
 
-symlink_lib 'subst_attr'
+symlink_lib 'attribute'

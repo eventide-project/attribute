@@ -1,3 +1,3 @@
 source ./library-symlinks.sh
 
-remove_lib_symlinks 'subst_attr'
+remove_lib_symlinks 'attribute'
