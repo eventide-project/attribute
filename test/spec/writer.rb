@@ -1,3 +1,5 @@
+require_relative 'spec_init'
+
 module Writer
   class Example
     include Proof::Attribute
@@ -6,8 +8,9 @@ module Writer
   end
 end
 
-describe Writer::Example do
+describe "Writer" do
   specify "Is a writer" do
-    expect(subject.writer? :some_attr).to be(true)
+    example = Writer::Example.new
+    assert(example.writer? :some_attr)
   end
 end

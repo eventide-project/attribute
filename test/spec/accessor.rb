@@ -1,13 +1,16 @@
+require_relative 'spec_init'
+
 module Accessor
   class Example
-    include Proof::Attribute
+    include ::Proof::Attribute
 
     Attribute::Define.(self, :some_attr, :accessor)
   end
 end
 
-describe Accessor::Example do
+describe "Attribute" do
   specify "Is an accessor" do
-    expect(subject.accessor? :some_attr).to be(true)
+    example = Accessor::Example.new
+    assert(example.accessor? :some_attr)
   end
 end
