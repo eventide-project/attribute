@@ -1,3 +1,5 @@
+require_relative 'spec_init'
+
 module Reader
   class Example
     include Proof::Attribute
@@ -6,12 +8,14 @@ module Reader
   end
 end
 
-describe Reader::Example do
+describe "Reader" do
+  example = Reader::Example.new
+
   specify "Is a reader" do
-    expect(subject.reader? :some_attr).to be(true)
+    assert(example.reader? :some_attr)
   end
 
   specify "Has no initial value" do
-    expect(subject.some_attr).to be_nil
+    assert(example.some_attr.nil?)
   end
 end

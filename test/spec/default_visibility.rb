@@ -1,3 +1,5 @@
+require_relative 'spec_init'
+
 module DefaultVisibility
   class Example
     include Proof::Attribute
@@ -6,8 +8,9 @@ module DefaultVisibility
   end
 end
 
-describe DefaultVisibility::Example do
+describe "Default Visibility" do
   specify "Is a reader" do
-    expect(subject.reader? :some_attr).to be(true)
+    example = DefaultVisibility::Example.new
+    assert(example.reader? :some_attr)
   end
 end
