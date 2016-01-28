@@ -6,8 +6,8 @@ module ReaderWithoutInitialValue
   end
 end
 
-describe "Initial value is not given as part of the attribute definition" do
-  specify "The attribute has no initial value" do
+context "Initial value is not given as part of the attribute definition" do
+  test "The attribute has no initial value" do
     example = ReaderWithoutInitialValue::Example.new
     assert(example.some_attr.nil?)
   end

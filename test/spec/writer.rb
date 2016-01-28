@@ -8,8 +8,8 @@ module Writer
   end
 end
 
-describe "Writer" do
-  specify "Is a writer" do
+context "Writer" do
+  test "Is a writer" do
     example = Writer::Example.new
     assert(example.writer? :some_attr)
   end

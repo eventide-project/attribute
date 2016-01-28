@@ -8,14 +8,14 @@ module Reader
   end
 end
 
-describe "Reader" do
+context "Reader" do
   example = Reader::Example.new
 
-  specify "Is a reader" do
+  test "Is a reader" do
     assert(example.reader? :some_attr)
   end
 
-  specify "Has no initial value" do
+  test "Has no initial value" do
     assert(example.some_attr.nil?)
   end
 end

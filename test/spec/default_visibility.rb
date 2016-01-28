@@ -8,8 +8,8 @@ module DefaultVisibility
   end
 end
 
-describe "Default Visibility" do
-  specify "Is a reader" do
+context "Default Visibility" do
+  test "Is a reader" do
     example = DefaultVisibility::Example.new
     assert(example.reader? :some_attr)
   end

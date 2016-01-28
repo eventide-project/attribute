@@ -8,8 +8,8 @@ module ReaderWithInitialValue
   end
 end
 
-describe "Initial value is given as part of the attribute definition" do
-  specify "The attribute's value is the initial value" do
+context "Initial value is given as part of the attribute definition" do
+  test "The attribute's value is the initial value" do
     example = ReaderWithInitialValue::Example.new
     assert(example.some_attr == :some_initial_value)
   end
