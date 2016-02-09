@@ -1,3 +1,5 @@
+## TODO Does not need to be a stateful instance [Scott, Sat Feb 6 2016]
+## Can just be a module
 module Attribute
   class Define
     attr_reader :target_class
