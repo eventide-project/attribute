@@ -1,5 +1,7 @@
 ## TODO Does not need to be a stateful instance [Scott, Sat Feb 6 2016]
 ## Can just be a module
+## Unless there's something about typed attributes that needs to be stateful
+## But that should be handled in the schema libray
 module Attribute
   class Define
     attr_reader :target_class
