@@ -5,8 +5,8 @@ Gem::Specification.new do |s|
   s.summary = 'Define an attribute on a class using an imperative API'
   s.description = ' '
 
-  s.authors = ['Obsidian Software, Inc']
-  s.email = 'opensource@obsidianexchange.com'
+  s.authors = ['The Eventide Project']
+  s.email = 'opensource@eventide-project.org'
   s.homepage = 'https://github.com/obsidian-btc/attribute'
   s.licenses = ['MIT']
 
