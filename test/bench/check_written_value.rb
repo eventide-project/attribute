@@ -4,7 +4,7 @@ module CheckWrittenValue
   class Error < RuntimeError; end
 
   class Example
-    Attribute::Define.(self, :some_attr, :accessor, -> (val) { raise Error unless val == 'some value' })
+    Attribute::Define.(self, :some_attr, :accessor, check: -> (val) { raise Error unless val == 'some value' })
   end
 end
 
