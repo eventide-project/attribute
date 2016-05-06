@@ -13,7 +13,7 @@ module Attribute
         define_writer(target_class, attr_name, visibility, check, &initialize_value)
       end
 
-      nil
+      attr_name
     end
     class << self; alias :! :call; end # TODO: Remove deprecated actuator [Kelsey, Thu Oct 08 2015]
 
