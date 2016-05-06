@@ -12,6 +12,8 @@ module Attribute
       if [:writer, :accessor].include? visibility
         define_writer(target_class, attr_name, visibility, check, &initialize_value)
       end
+
+      nil
     end
     class << self; alias :! :call; end # TODO: Remove deprecated actuator [Kelsey, Thu Oct 08 2015]
 
