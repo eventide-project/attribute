@@ -23,7 +23,7 @@ module Attribute
       target_class.send :define_method, attr_name do
         val = instance_variable_get(var_name)
 
-        unless val
+        if val.nil?
           if initialize_value
             val = initialize_value.()
             instance_variable_set var_name, val
