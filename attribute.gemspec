@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name = 'evt-attribute'
-  s.version = '0.1.3.3'
+  s.version = '0.1.3.4'
   s.summary = 'Define an attribute on a class using an imperative API'
   s.description = ' '
 
