@@ -8,6 +8,8 @@ module Accessor
   end
 end
 
+# TODO Test accessor? predicate separately
+# Test accessor more thoroughly
 context "Attribute" do
   test "Is an accessor" do
     example = Accessor::Example.new

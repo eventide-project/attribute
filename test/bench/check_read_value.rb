@@ -13,6 +13,8 @@ context "Check Read Value" do
 
   test "Pass" do
     example.some_attr = 'some value'
+
+    ## TODO Refute the attr read fails
     example.some_attr
   end
 

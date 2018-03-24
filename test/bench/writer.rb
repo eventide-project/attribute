@@ -8,6 +8,8 @@ module Writer
   end
 end
 
+
+# TODO test by writing
 context "Writer" do
   test "Is a writer" do
     example = Writer::Example.new

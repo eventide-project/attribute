@@ -21,13 +21,17 @@ module Attribute
       attr_name = :"#{attr_name}" unless attr_name.is_a? Symbol
       var_name = "@#{attr_name}"
       target_class.send :define_method, attr_name do
-        val = instance_variable_get(var_name)
 
-        if val.nil?
-          if initialize_value
+        defined = instance_variable_defined?(var_name)
+
+        val = nil
+        if defined
+          val = instance_variable_get(var_name)
+        else
+          unless initialize_value.nil?
             val = initialize_value.()
-            instance_variable_set var_name, val
           end
+          instance_variable_set var_name, val
         end
 
         if check
