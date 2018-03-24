@@ -15,7 +15,6 @@ module Attribute
 
       attr_name
     end
-    class << self; alias :! :call; end # TODO: Remove deprecated actuator [Kelsey, Thu Oct 08 2015]
 
     def define_reader(target_class, attr_name, visibility, check, &initialize_value)
       attr_name = :"#{attr_name}" unless attr_name.is_a? Symbol
