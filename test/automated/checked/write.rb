@@ -6,8 +6,8 @@ context "Checked" do
       example = Attribute::Controls::Checked.example
 
       test do
-        refute proc { example.some_attr = 'some value'} do
-          raises_error? Attribute::Controls::Checked::Error
+        refute_raises Attribute::Controls::Checked::Error do
+          example.some_attr = 'some value'
         end
       end
     end
@@ -16,8 +16,8 @@ context "Checked" do
       example = Attribute::Controls::Checked.example
 
       test do
-        assert proc { example.some_attr = 'some other value'} do
-          raises_error? Attribute::Controls::Checked::Error
+        assert_raises Attribute::Controls::Checked::Error do
+          example.some_attr = 'some other value'
         end
       end
     end
