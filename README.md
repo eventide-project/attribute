@@ -6,20 +6,43 @@ Define an attribute on a class using an imperative API.
 
 ``` ruby
 class Something
-  attribute :some_attribute
-  attribute :some_other_attribute
+  Attribute::Define.(self, :some_accessor, :accessor)
+  Attribute::Define.(self, :some_reader, :reader)
+  Attribute::Define.(self, :some_writer, :writer)
+
+  def initialize(some_accessor, some_reader, some_writer)
+    @some_accessor = some_accessor
+    @some_reader = some_reader
+    @some_writer = some_writer
+  end
 end
 
-something = Something.new
+something = Something.new(
+  'Some Accessor Value',
+  'Some Reader Value',
+  'Some Writer Value'
+)
 
-something.some_attribute = 'Some Value'
-something.some_other_attribute = 'Some Other Value'
+## Accessor
+puts something.some_accessor
+# => "Some Accessor Value"
 
-puts something.some_attribute
-# => "Some Value"
-
-puts something.some_other_attribute
+something.some_accessor = 'Some Other Value'
+puts something.some_accessor
 # => "Some Other Value"
+
+## Reader
+puts something.some_reader
+# => "Some Reader Value"
+
+something.some_reader = 'Some Other Value'
+# => NoMethodError (undefined method `some_reader=' for #<Something:0x...>)
+
+## Writer
+puts something.some_writer
+# => NoMethodError (undefined method `some_writer' for #<Something:0x...>)
+
+something.some_writer = 'Some Other Value'
 ```
 
 ## License
