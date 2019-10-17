@@ -6,7 +6,7 @@ context "Checked" do
       example = Attribute::Controls::Checked.example
 
       test do
-        refute_raises Attribute::Controls::Checked::Error do
+        refute_raises(Attribute::Controls::Checked::Error) do
           example.some_attr = 'some value'
         end
       end
@@ -16,7 +16,7 @@ context "Checked" do
       example = Attribute::Controls::Checked.example
 
       test do
-        assert_raises Attribute::Controls::Checked::Error do
+        assert_raises(Attribute::Controls::Checked::Error) do
           example.some_attr = 'some other value'
         end
       end
