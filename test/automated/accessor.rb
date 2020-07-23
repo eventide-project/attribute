@@ -5,7 +5,9 @@ context "Accessor" do
   value = SecureRandom.hex
 
   test "Writes" do
-    example.some_attr = value
+    refute_raises do
+      example.some_attr = value
+    end
   end
 
   test "Reads" do
