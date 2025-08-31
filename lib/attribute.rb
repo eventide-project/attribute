@@ -1,1 +1,1 @@
-require 'attribute/define'
+require "attribute/define"

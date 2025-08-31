@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Checked" do
   context "Read" do
@@ -16,7 +16,7 @@ context "Checked" do
       example = Attribute::Controls::Checked.example
 
       example.instance_exec do
-        @some_attr = 'some other value'
+        @some_attr = "some other value"
       end
 
       test do

@@ -1,9 +1,9 @@
 puts RUBY_DESCRIPTION
 
-require_relative '../init.rb'
+require_relative "../init.rb"
 
-require 'attribute/controls'
+require "attribute/controls"
 
-require 'securerandom'
+require "securerandom"
 
-require 'test_bench'; TestBench.activate
+require "test_bench"; TestBench.activate

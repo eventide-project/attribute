@@ -10,7 +10,7 @@ module Attribute
       end
 
       def self.value
-        'some value'
+        "some value"
       end
 
       class Example

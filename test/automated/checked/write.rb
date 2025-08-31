@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Checked" do
   context "Write" do
@@ -7,7 +7,7 @@ context "Checked" do
 
       test do
         refute_raises(Attribute::Controls::Checked::Error) do
-          example.some_attr = 'some value'
+          example.some_attr = "some value"
         end
       end
     end
@@ -17,7 +17,7 @@ context "Checked" do
 
       test do
         assert_raises(Attribute::Controls::Checked::Error) do
-          example.some_attr = 'some other value'
+          example.some_attr = "some other value"
         end
       end
     end
